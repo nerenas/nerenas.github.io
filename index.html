@@ -4,6 +4,30 @@
 <title >Poorly Made Sites Corp.</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="icon" type="image/png" href="images/pmsco.png">
+<script type="text/javascript">
+function hide(){
+document.getElementById("rates").style.display="none";
+document.getElementById("hide").style.display="none";
+document.getElementById("show").style.display="block";
+}	
+function show(){
+document.getElementById("rates").style.display="block";
+document.getElementById("hide").style.display="block";
+document.getElementById("show").style.display="none";
+}	
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 </head>
 
 <body>
@@ -44,7 +68,9 @@ Imagine being able to take out all your business rivals with a <strong><em>singl
 <br>
 <br>
 
-
+<img id="hide" onclick="hide()" align="left" class="w3-button" src="images/hide.png">
+<img id="show" onclick="show()" align="left" class="w3-button" style="display: none;" src="images/show.png">
+<div id="rates">
 <strong><em><h2 style="text-align:center;">R A T E S </h2></em></strong>
 <table style="width: 60%; margin-left: auto; margin-right: auto;"class="w3-table-all w3-panel">
 	<tr class="w3-green">
@@ -70,7 +96,7 @@ Imagine being able to take out all your business rivals with a <strong><em>singl
 
 
 </table>
-
+</div>
 
 <h2 style="text-align:center;">PMC Card Service</h2>
 <h3 style="text-align:center;">The PMC Card is a one time paid service.</h3>
