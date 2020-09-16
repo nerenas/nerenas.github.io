@@ -15,8 +15,12 @@ document.getElementById("rates").style.display="block";
 document.getElementById("hide").style.display="block";
 document.getElementById("show").style.display="none";
 }	
+function clickresult(){
+window.open("clickresult.html","_blank","menubar=0");
+window.self.close();
+	
 
-
+}
 
 
 
@@ -37,19 +41,20 @@ document.getElementById("show").style.display="none";
   class="w3-button w3-display-topright">X</span>
   <p>This website is currently under review for illegal conduct.</p>
 </div> 
-<h1 style="text-align:center;" >Profesional stupid sites.</h1>
+<em><h1 style="text-align:center;color: rgb(204, 255, 153);" >Profesional stupid sites.</h1></em>
 <br>
 <div class="w3-panel w3-sand">
 <p style="text-align:center;">Welcome to this poorly made site! Poorly made sites Corp. aspires to make every site on the internet poorly made.<br>
 The reason this corporation was created was when two idiots were jealous because other people's websites looked too cool so they got salty<br>
 and wanted to sabotage them. Ever since 2002 PMS Corp. has sabotaged around 1800 websites and single handedly has caused the bankrupcy of over 200 businesses.<br>
-Have a business rival you have? Contact us via 1-800-I AM JEALOUS. If you contact via our email `business@pmscorp.com` right now we will offer you a 25% discount <br> 
+Have a business rival you have? Contact us via <strong>1-800-I AM JEALOUS.</strong> If you contact via our email `business@pmscorp.com` right now we will offer you a 25% discount <br> 
 on a single sabotage. Buy <strong>5 sabotages</strong> in a single purchase and get one sabotage <strong><em>F R E E O F C H A R G E</em></strong>. <br>
 Imagine being able to take out all your business rivals with a <strong><em>single purchase</em></strong>.
 </p>
 </div>
+
 <div class="w3-center">
-<select style="width: 30%" class="w3-select w3-border w3-hover-green" name="paymethod">
+<select name="payment" style="width: 30%" class="w3-select w3-border w3-hover-green" name="paymethod">
 	<option value="" disabled selected>Select a payment method</option>
 	<option value="Bitcoin">BitCoin</option>
 	<option value="Ethereum">Ethereum</option>
@@ -64,12 +69,12 @@ Imagine being able to take out all your business rivals with a <strong><em>singl
 
 
 </select>
-<a class="w3-button w3-block w3-black" href="clickresult.html">Purchase</a>
+<a id="purchasebtn" class="w3-button w3-block w3-black" onclick="clickresult()">Purchase</a>
 <br>
 <br>
 
-<img id="hide" onclick="hide()" align="left" class="w3-button" src="images/hide.png">
-<img id="show" onclick="show()" align="left" class="w3-button" style="display: none;" src="images/show.png">
+<img id="hide" onclick="hide()" align="right" class="w3-button" src="images/hide.png">
+<img id="show" onclick="show()" align="right" class="w3-button" style="display: none;" src="images/show.png">
 <div id="rates">
 <strong><em><h2 style="text-align:center;">R A T E S </h2></em></strong>
 <table style="width: 60%; margin-left: auto; margin-right: auto;"class="w3-table-all w3-panel">
@@ -119,6 +124,19 @@ The sabotage's size will be determined on how many PMC Points are paid. For exam
 	<li>Company Shares</li>
 	<li>IOTA</li>
 
+<h1>Documentation of our preffered payment methods.</h1>
+<h3>
+	<a href="https://bitcoin.org/" target="_blank">Bitcoin</a> <br>
+	<a href="https://ethereum.org/" target="_blank">Ethereum</a> <br>
+	<a href="https://www.visa.com" target="_blank">Visa Cards</a> <br>
+	<a href="https://neo.org/" target="_blank">NEO</a> <br>
+	<a href="https://litecoin.org/" target="_blank">Litecoin</a>
+
+
+
+
+
+</h3>
 
 
 
