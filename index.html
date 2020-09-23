@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="icon" type="image/png" href="images/pmsco.png">
 <script type="text/javascript">
+var nightmodebb = false;
 function hide(){
 document.getElementById("rates").style.display="none";
 document.getElementById("hide").style.display="none";
@@ -17,9 +18,49 @@ document.getElementById("show").style.display="none";
 }	
 function clickresult(){
 window.open("why.html","_self")
-	
+}
+
+function enablepurchase(){
+document.getElementById("purchasebtn").classList.remove("w3-disabled");
+document.getElementById("purchasebtn").setAttribute("onclick","clickresult()");
+}
+function togglenm(){ 
+if(nightmodebb == false){
+document.body.style.backgroundColor = "rgb(38, 41, 38)";
+document.body.style.color = "white";
+document.getElementById('rates1').classList.remove("w3-green");
+document.getElementById('ratestable').style.backgroundColor="rgb(47, 48, 48)";
+document.getElementById('paymentselect').style.backgroundColor="rgb(47, 48, 48)";
+document.getElementById('paymentselect').style.color="white";
+document.getElementById('maintext').classList.remove('w3-sand');
+document.getElementById('maintext').backgroundColor = "rgb(47, 48, 48)";
+document.getElementById('maintext').color = "white";
+document.getElementById('nightmode').src = "images/lightmode.png";
+document.getElementById('titletext').style.color = "rgb(204, 255, 153)";
+document.getElementById('rates1').style.backgroundColor= "rgb(38, 38, 38)"
+document.getElementById('maintext').style.backgroundColor="rgb(47, 48, 48)"
+nightmodebb = true;
+}else if(nightmodebb=true){
+document.body.style.backgroundColor = "white";
+document.body.style.color = "black";
+document.getElementById('rates1').classList.add("w3-green");
+document.getElementById('ratestable').style.backgroundColor="white";
+document.getElementById('paymentselect').style.backgroundColor="white";
+document.getElementById('paymentselect').style.color="black";
+document.getElementById('maintext').classList.add('w3-sand');
+document.getElementById('maintext').backgroundColor = "white";
+document.getElementById('maintext').color = "black";
+document.getElementById('nightmode').src = "images/nightmode.png";
+document.getElementById('titletext').style.color = "rgb(7, 99, 24)";
+document.getElementById('rates1').style.backgroundColor="white"
+document.getElementById('maintext').style.backgroundColor="white"
+
+nightmodebb = false;
+
 
 }
+}
+
 
 
 
@@ -33,16 +74,18 @@ window.open("why.html","_self")
 
 </head>
 
-<body>
+<body id="mainbody" style="background-color:white;color: black">
 <div class="w3-panel w3-red w3-display-container" >
   <h3>Critical Warning!</h3>
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-display-topright">X</span>
   <p>This website is currently under review for illegal conduct.</p>
 </div> 
-<em><h1 style="text-align:center;color: rgb(204, 255, 153);" >Profesional stupid sites.</h1></em>
+<em><h1 id="titletext" style="text-align:center;color: rgb(7, 99, 24);" >Profesional stupid sites.</h1></em>
+
 <br>
-<div class="w3-panel w3-sand">
+<div id="maintext" class="w3-panel w3-sand">
+<img title="Toggle night mode" onclick="togglenm()" id="nightmode" class="w3-button" align="right" src="images/nightmode.png">
 <p style="text-align:center;">Welcome to this poorly made site! Poorly made sites Corp. aspires to make every site on the internet poorly made.<br>
 The reason this corporation was created was when two idiots were jealous because other people's websites looked too cool so they got salty<br>
 and wanted to sabotage them. Ever since 2002 PMS Corp. has sabotaged around 1800 websites and single handedly has caused the bankrupcy of over 200 businesses.<br>
@@ -53,7 +96,7 @@ Imagine being able to take out all your business rivals with a <strong><em>singl
 </div>
 
 <div class="w3-center">
-<select name="payment" style="width: 30%" class="w3-select w3-border w3-hover-green" name="paymethod">
+<select id="paymentselect" onclick="enablepurchase()" name="payment" style="width: 30%" class="w3-select w3-border w3-hover-green" name="paymethod">
 	<option value="" disabled selected>Select a payment method</option>
 	<option value="Bitcoin">BitCoin</option>
 	<option value="Ethereum">Ethereum</option>
@@ -68,28 +111,33 @@ Imagine being able to take out all your business rivals with a <strong><em>singl
 
 
 </select>
-<a id="purchasebtn" class="w3-button w3-block w3-black" onclick="clickresult()">Purchase</a>
+<a id="purchasebtn" class="w3-button w3-block w3-black w3-disabled" onclick="">Purchase</a>
 <br>
 <br>
 
-<img id="hide" onclick="hide()" align="right" class="w3-button" src="images/hide.png">
-<img id="show" onclick="show()" align="right" class="w3-button" style="display: none;" src="images/show.png">
+<img id="hide" title="Toggle the rates table" onclick="hide()" align="right" class="w3-button" src="images/hide.png">
+<img id="show" title="Toggle the rates table" onclick="show()" align="right" class="w3-button" style="display: none;" src="images/show.png">
 <div id="rates">
+
+
 <strong><em><h2 style="text-align:center;">R A T E S </h2></em></strong>
-<table style="width: 60%; margin-left: auto; margin-right: auto;"class="w3-table-all w3-panel">
-	<tr class="w3-green">
+
+
+
+<table id="ratestable" style="width: 60%; margin-left: auto; margin-right: auto;">
+	<tr id="rates1" class="w3-green">
 		<th>Traffic Rate(Users/Month)</th>	
 		<th>Payment($USD/Hour)</th>
 	</tr>
-	<tr>
+	<tr id="rates2">
 		<th>2200</th>	
 		<th>250</th>
 	</tr>
-	<tr>
+	<tr id="rates3">
 		<th>8000</th>	
 		<th>600</th>
 	</tr>
-	<tr>
+	<tr id="rates4">
 		<th>22000</th>	
 		<th>1200</th>
 	</tr>
@@ -123,7 +171,7 @@ The sabotage's size will be determined on how many PMC Points are paid. For exam
 	<li>Company Shares</li>
 	<li>IOTA</li>
 
-<h1>Documentation of our preffered payment methods.</h1>
+<h1>Learn More About Our Preffered Payment Methods</h1>
 <h3>
 	<a href="https://bitcoin.org/" target="_blank">Bitcoin</a> <br>
 	<a href="https://ethereum.org/" target="_blank">Ethereum</a> <br>
