@@ -53,3 +53,26 @@ nightmodebb = false;
 
 }
 }
+//why.html---------------------------
+	function openwindow(){
+		click = window.open("clickresult.html","_blank","menubar=0");
+	}
+	function checkwindow(){
+		if (click.closed){
+			window.open("index.html","_self");
+		}
+		else {
+			return;
+		}
+	}
+	function scrolltop(){
+		window.scrollTo(0,0);
+
+
+
+
+	}
+//clickresult.html
+	function takeback(){
+window.close();
+}	
